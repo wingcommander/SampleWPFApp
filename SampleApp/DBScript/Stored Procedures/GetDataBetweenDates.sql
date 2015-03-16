@@ -1,0 +1,7 @@
+﻿
+
+CREATE PROCEDURE [dbo].GetDataBetweenDates
+@Start DATETIME, @End DATETIME
+WITH EXECUTE AS CALLER
+AS
+SELECT * FROM dbo.Data WHERE Date BETWEEN @Start AND @End
